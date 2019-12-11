@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SwipeView.Views.NotificationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SwipeView.ViewModels">
+    <ContentPage.BindingContext>
+        <local:NotificationViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView
+            x:Name="SwipeListView"
+            HasUnevenRows="True"
+            HorizontalScrollBarVisibility="Never"
+            ItemsSource="{Binding Items}"
+            SeparatorColor="#fafafa"
+            SeparatorVisibility="Default"
+            VerticalScrollBarVisibility="Never">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <SwipeView
+                            x:Name="swipe"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <SwipeView.LeftItems>
+                                <SwipeItem
+                                    BackgroundColor="Yellow"
+                                    IconImageSource="star.png"
+                                    IsDestructive="True" />
+                            </SwipeView.LeftItems>
+                            <SwipeView.RightItems>
+                                <SwipeItem
+                                    BackgroundColor="Red"
+                                    IconImageSource="delete.png"
+                                    IsDestructive="True" />
+                            </SwipeView.RightItems>
+                            <ContentView Padding="10" BackgroundColor="White">
+                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="{Binding Title}"
+                                        TextColor="Gray"
+                                        VerticalOptions="Fill" />
+                                    <Label
+                                        FontSize="14"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="{Binding Message}"
+                                        TextColor="Gray"
+                                        VerticalOptions="Fill" />
+                                </StackLayout>
+                            </ContentView>
+                        </SwipeView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+C:\Demo\SwipeView\SwipeView\SwipeView\bin\Debug\netstandard2.0\SwipeView.deps.json
+C:\Demo\SwipeView\SwipeView\SwipeView\bin\Debug\netstandard2.0\SwipeView.dll
+C:\Demo\SwipeView\SwipeView\SwipeView\bin\Debug\netstandard2.0\SwipeView.pdb
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\SwipeView.csprojAssemblyReference.cache
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\SwipeView.csproj.CoreCompileInputs.cache
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\SwipeView.AssemblyInfoInputs.cache
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\SwipeView.AssemblyInfo.cs
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\SwipeView.dll
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\SwipeView.pdb
+C:\Demo\SwipeView\SwipeView\SwipeView\obj\Debug\netstandard2.0\Views\NotificationPage.xaml.g.cs
