@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SwipeView.Views.SwipeviewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SwipeView.ViewModels">
+    <ContentPage.BindingContext>
+        <local:SwipeviewViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid BackgroundColor="#c9abff">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Margin="0,40,0,0"
+                FontAttributes="Bold"
+                FontSize="24"
+                HorizontalOptions="Center"
+                Text="Pokemon"
+                TextColor="White" />
+            <CollectionView
+                Grid.Row="1"
+                Margin="12,12,12,0"
+                BackgroundColor="#c9abff"
+                ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView HeightRequest="180">
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItemView>
+                                        <Grid BackgroundColor="#c9abff" WidthRequest="120">
+                                            <BoxView
+                                                Margin="0,12,0,12"
+                                                BackgroundColor="Green"
+                                                CornerRadius="0,12,0,12" />
+                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                                            <Image
+                                                Margin="30"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="Center"
+                                                Source="star.png"
+                                                VerticalOptions="Center" />
+                                            <Label
+                                                Margin="0,36,0,20"
+                                                FontAttributes="Bold"
+                                                FontSize="12"
+                                                HorizontalOptions="Center"
+                                                Text="Favourite"
+                                                TextColor="#FFECCB"
+                                                VerticalOptions="End" />
+                                        </Grid>
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <SwipeView.LeftItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItemView>
+                                        <Grid BackgroundColor="#c9abff" WidthRequest="120">
+                                            <BoxView
+                                                Margin="0,12,0,12"
+                                                BackgroundColor="Green"
+                                                CornerRadius="0,12,0,12" />
+                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                                            <Image
+                                                Margin="30"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="Center"
+                                                Source="pokeball.png"
+                                                VerticalOptions="Center" />
+                                            <Label
+                                                Margin="0,36,0,20"
+                                                FontAttributes="Bold"
+                                                FontSize="12"
+                                                HorizontalOptions="Center"
+                                                Text="Add"
+                                                TextColor="#FFECCB"
+                                                VerticalOptions="End" />
+                                        </Grid>
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <SwipeView.Content>
+                                <Grid BackgroundColor="#c9abff">
+                                    <StackLayout
+                                        Padding="10"
+                                        BackgroundColor="#c9abff"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand">
+                                        <Frame
+                                            BackgroundColor="#985eff"
+                                            CornerRadius="16"
+                                            HasShadow="False"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand">
+                                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="150" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Label
+                                                    Grid.Row="0"
+                                                    Grid.Column="1"
+                                                    FontAttributes="Bold"
+                                                    FontSize="22"
+                                                    HorizontalOptions="FillAndExpand"
+                                                    HorizontalTextAlignment="Center"
+                                                    Text="{Binding Title}"
+                                                    TextColor="White"
+                                                    VerticalOptions="Center" />
+                                            </Grid>
+                                        </Frame>
+                                    </StackLayout>
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="200"
+                                        HorizontalOptions="Start"
+                                        Source="{Binding Icons}" />
+
+                                </Grid>
+                            </SwipeView.Content>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

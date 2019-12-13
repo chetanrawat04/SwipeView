@@ -10,21 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace SwipeView.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NotificationPage : ContentPage
+	public partial class SwipeviewPage : ContentPage
 	{
-		public NotificationPage ()
+		public SwipeviewPage()
 		{
 			InitializeComponent ();
-		}
-
-        private void SwipeItem_Clicked(object sender, EventArgs e)
-        {
-
         }
 
-        private void SwipeItem_Clicked_1(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-
+            base.OnAppearing();
         }
     }
 }

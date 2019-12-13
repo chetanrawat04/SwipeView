@@ -9,10 +9,10 @@ using Xamarin.Forms;
 
 namespace SwipeView.ViewModels
 {
-    class NotificationViewModel : INotifyPropertyChanged
+    class SwipeviewViewModel : INotifyPropertyChanged
     {
-        ObservableCollection<NotificationModel> _Items;
-        public ObservableCollection<NotificationModel> Items
+        ObservableCollection<SwipeviewModel> _Items;
+        public ObservableCollection<SwipeviewModel> Items
         {
             get
             {
@@ -25,16 +25,19 @@ namespace SwipeView.ViewModels
             }
         }
 
-        public NotificationViewModel()
+        public SwipeviewViewModel()
         {
-            Items = new ObservableCollection<NotificationModel>();
+            Items = new ObservableCollection<SwipeviewModel>();
             AddItems();
         }
         void AddItems()
         {
-            _Items.Add(new NotificationModel { Title = "Info", Message = "This is only information message please ignor this one." });
-            _Items.Add(new NotificationModel { Title = "Alert", Message = "This is only Alert message please ignor this one." });
-            _Items.Add(new NotificationModel { Title = "Suggesstion", Message = "This is only Suggesstion message please ignor this one." });
+            _Items.Add(new SwipeviewModel { Title = "Bullbasaur",Icons= "bullbasaur.png" }); 
+            _Items.Add(new SwipeviewModel { Title = "Pikachu" ,Icons= "pikachu.png" });
+            _Items.Add(new SwipeviewModel { Title = "Jigglypuff" , Icons= "jigglypuff.png" });
+            _Items.Add(new SwipeviewModel { Title = "Snorlax", Icons = "snorlax.png" });
+            _Items.Add(new SwipeviewModel { Title = "Dratini", Icons = "dratini.png" });
+            _Items.Add(new SwipeviewModel { Title = "Eevee",  Icons = "eevee.png" });
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -12,7 +12,7 @@ namespace SwipeView
         {
             InitializeComponent();
 
-            MainPage = new NotificationPage();
+            MainPage = new SwipeviewPage();
         }
 
         protected override void OnStart()

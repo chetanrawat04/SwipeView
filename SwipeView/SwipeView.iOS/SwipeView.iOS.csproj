@@ -158,9 +158,39 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\delete.png" />
+    <AndroidResource Include="Resources\delete.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\star.png" />
+    <AndroidResource Include="Resources\star.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\bullbasaur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\dratini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\eevee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\jigglypuff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\meowth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\pikachu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\pokeball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\snorlax.png" />
   </ItemGroup>
 </Project>
